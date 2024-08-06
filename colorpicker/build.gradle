@@ -25,3 +25,14 @@ dependencies {
     implementation dependenciesList.Appcompat
     implementation dependenciesList.Constraintlayout
 }
+
+if (rootProject.file('gradle/publish-module.gradle').exists()) {
+    apply from: rootProject.file('gradle/publish-module.gradle')
+    publishing {
+        publications {
+            release(MavenPublication) {
+                artifactId = 'picker'
+            }
+        }
+    }
+}

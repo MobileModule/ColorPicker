@@ -55,7 +55,9 @@ public abstract class ColorSliderView extends View implements ColorObservable, U
         selectorSize = h * 0.25f;
         selectorPath.moveTo(0, 0);
         selectorPath.lineTo(selectorSize * 2, 0);
-        selectorPath.lineTo(selectorSize, selectorSize);
+//        selectorPath.lineTo(selectorSize, selectorSize);
+        selectorPath.lineTo(selectorSize * 2, h);
+        selectorPath.lineTo(0, h);
         selectorPath.close();
     }
 
